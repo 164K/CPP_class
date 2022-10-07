@@ -28,12 +28,11 @@ bool lsmatch(string s)
             	return false;
         }
         ms.dispStack();
-        // cout<<1;
     }
     return ms.isEmpty();
 }
 
 int main()
 {
-    cout << lsmatch("(1+2/(3)[{}]")<<endl;
+    cout << (lsmatch("(1+2/(3)[{}])")?"True":"False")<<endl;
 }
