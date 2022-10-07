@@ -1,30 +1,26 @@
 #include "Mystack.hpp"
 #include "iostream"
+#include <algorithm>
 #include <set>
 #include <map>
 
 using namespace std;
 
-bool lsmatch(string s)
+bool lsmatch(string s, string ls="([{", string rs=")]}")
 {
 	Mystack<char> ms(s.length());
-    
-    map<char, char> msmap{
-        {'(',')'},
-        {'[',']'},
-        {'{','}'}
-    };
-    set<char> lset{'(','[','{'},rset{')',']','}'};
-
 	for (auto ch:s)
     {
-        if(lset.find(ch)!=lset.end())
+        if(find(ls.begin(), ls.end(), ch)!=ls.end())
         	ms.push(ch);
-        else if (rset.find(ch)!=rset.end())
+        else if (find(rs.begin(), rs.end(), ch)!=rs.end())
         {
-        	if (ms.isEmpty())
-            	return false; 
-        	else if(msmap[ms.pop()]!=ch)
+        	if (!ms.isEmpty())
+            {
+                char popchar = ms.pop();
+                if(rs[ls.find(popchar)]!=ch)
+                    return false;
+            }else
             	return false;
         }
         ms.dispStack();
@@ -34,5 +30,6 @@ bool lsmatch(string s)
 
 int main()
 {
-    cout << (lsmatch("(1+2/(3)[{}])")?"True":"False")<<endl;
+    string s = "", ls = "([{<", rs = ")]}>";
+    cout << (lsmatch("(1+4)/{2+5}*<45\"youjui\">", ls, rs)?"True":"False")<<endl;
 }
