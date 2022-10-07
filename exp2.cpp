@@ -31,5 +31,5 @@ bool lsmatch(string s, string ls="([{", string rs=")]}")
 int main()
 {
     string s = "", ls = "([{<", rs = ")]}>";
-    cout << (lsmatch("(1+4)/{2+5}*<45\"youjui\">", ls, rs)?"True":"False")<<endl;
+    cout << (lsmatch("(1+4/<{2+5}*45\"youjui\">)", ls, rs)?"True":"False")<<endl;
 }

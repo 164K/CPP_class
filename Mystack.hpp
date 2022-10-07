@@ -45,9 +45,9 @@ Mystack<T>::Mystack(T* arr,int N, int MaxSize):Mystack<T>(MaxSize)
 template<class T>
 void Mystack<T>::dispStack()
 {
-    cout<<"Stack: [ ";
+    cout<<"Stack: [[ ";
     for(int i=0;i<=top;i++)
-        cout<<data[i]<<" > ";
+        cout<<data[i]<<" -> ";
     cout<<endl;
 }
 

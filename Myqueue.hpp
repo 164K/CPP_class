@@ -89,9 +89,9 @@ T Myqueue<T>::deQueue()
 template<class T>
 void Myqueue<T>::dispQueue()
 {
-    cout<<"Queue: > ";
+    cout<<"Queue: >> ";
     for(int i=(front+1)%MS;i!=(rear+1)%MS;i=(i+1)%MS)
-        cout<<data[i]<<" > ";
+        cout<<data[i]<<" -> ";
     cout<<endl;
 }
 
