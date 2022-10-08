@@ -52,7 +52,7 @@ void queueCall(unsigned int N)
 
 int main()
 {
-    // string s = "", ls = "([{<", rs = ")]}>";
-    // cout << (lsmatch("(1+4/<{2+5}*45\"youjui\">)", ls, rs)?"True":"False")<<endl;
-    queueCall(100);
+    string s = "", ls = "([{<", rs = ")]}>";
+    cout << (lsmatch("(1+4/<{2+5}*45\"youjui\">)", ls, rs)?"True":"False")<<endl;
+    // queueCall(100);
 }
