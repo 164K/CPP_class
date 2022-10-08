@@ -5,10 +5,10 @@
             "includePath": [
                 "${workspaceFolder}/**"
             ],
-            "compilerPath": "/usr/bin/gcc",
+            "compilerPath": "cl.exe",
             "cStandard": "${default}",
             "cppStandard": "${default}",
-            "intelliSenseMode": "linux-gcc-x64",
+            "intelliSenseMode": "${default}",
             "compilerArgs": [],
             "configurationProvider": "ms-vscode.cmake-tools"
         }
