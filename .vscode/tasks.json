@@ -1,0 +1,74 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "cpp编译",
+            "command": "C:\\mingw64\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${file}",
+                "-o",
+                "C:\\CPP_BUILD\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "C:\\CPP_BUILD"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "调试器生成的任务。"
+        },
+        {
+            "type": "cppbuild",
+            "label": "exp2.cpp编译",
+            "command": "C:\\mingw64\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${workspaceFolder}\\exp2.cpp",
+                "-o",
+                "C:\\CPP_BUILD\\exp2.exe"
+            ],
+            "options": {
+                "cwd": "C:\\CPP_BUILD"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "调试器生成的任务。"
+        },
+        {
+            "type": "cppbuild",
+            "label": "main.cpp编译",
+            "command": "C:\\mingw64\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${workspaceFolder}\\main.cpp",
+                "-o",
+                "C:\\CPP_BUILD\\main.exe"
+            ],
+            "options": {
+                "cwd": "C:\\CPP_BUILD"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "调试器生成的任务。"
+        }
+    ],
+    "version": "2.0.0"
+}

@@ -5,16 +5,17 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "(gdb) 启动",
+            "name": "gdb启动",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/CPP_CLASS",
+            "program": "C:\\CPP_BUILD\\${fileBasenameNoExtension}.exe",
             "args": [],
             "stopAtEntry": false,
-            "cwd": "${fileDirname}",
+            "cwd": "C:\\CPP_BUILD",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
+            "miDebuggerPath": "gdb",
             "setupCommands": [
                 {
                     "description": "为 gdb 启用整齐打印",
@@ -22,11 +23,64 @@
                     "ignoreFailures": true
                 },
                 {
-                    "description": "将反汇编风格设置为 Intel",
+                    "description":  "将反汇编风格设置为 Intel",
                     "text": "-gdb-set disassembly-flavor intel",
                     "ignoreFailures": true
                 }
-            ]
+            ],
+            "preLaunchTask": "cpp编译"
+        },
+        {
+            "name": "exp2.cpp: gdb启动",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "C:\\CPP_BUILD\\exp2.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "C:\\CPP_BUILD",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "gdb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description":  "将反汇编风格设置为 Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "exp2.cpp编译"
+        },
+        {
+            "name": "main.cpp: gdb启动",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "C:\\CPP_BUILD\\main.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "C:\\CPP_BUILD",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "gdb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description":  "将反汇编风格设置为 Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "main.cpp编译"
         }
 
     ]
