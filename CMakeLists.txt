@@ -4,4 +4,4 @@ project(CPP_CLASS)
 
 include_directories(.)
 
-add_executable(${PROJECT_NAME} exp2.cpp main.cpp)
+add_executable(${PROJECT_NAME} exp2.cpp)
